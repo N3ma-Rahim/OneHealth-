@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-
+import { Link } from "react-router-dom";
 export default function Register() {
   const RegisterSchema = z.object({
     username: z
@@ -168,6 +168,12 @@ export default function Register() {
           >
             Register
           </button>
+          <p className="mt-4 text-center text-gray-600">
+              Already have an account?
+            <Link to="/auth/login" className="text-blue-500 hover:underline">
+               Login
+            </Link>
+          </p>
         </form>
       </div>
     </div>

@@ -21,8 +21,8 @@ export default function RoutesApp() {
         {/* Auth routes */}
         <Route path='/auth/login' element={<Login/>} />
         <Route path='/auth/register' element={<Register/>} />
-        <Route path='/auth/forget-password' element={<ForgetPassword />} />
-        <Route path='/auth/reset-password' element={<ResetPassword/>} />
+        <Route path='/auth/forgetpassword' element={<ForgetPassword />} />
+        <Route path='/auth/resetpassword' element={<ResetPassword/>} />
         {/* guest routes */}
         <Route path='/about' element={<About/>} />
         <Route path='/contact' element={<Contactus/>} />

@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-
+import  { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 export default function ForgetPassword() {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState(null) 
-
+  const navigate = useNavigate()
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!email) return
@@ -42,6 +42,7 @@ export default function ForgetPassword() {
 
           <div>
             <button
+              onClick={() => navigate('/auth/resetpassword')}
               type="submit"
               disabled={status === 'loading'}
               className="w-full inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"

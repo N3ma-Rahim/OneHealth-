@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const LoginSchema = z.object({
@@ -106,13 +107,21 @@ export default function Login() {
               </p>
             )}
           </div>
-
+          <p className="text-sm text-right text-blue-500 hover:underline">
+            <Link to="/auth/forgetpassword">Forgot Password?</Link>
+          </p>
           <button
             type="submit"
             className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition"
           >
             Login
           </button>
+          <p className="mt-4 text-center text-gray-600">
+            Don't have an account?{" "}
+            <Link to="/auth/register" className="text-blue-500 hover:underline">
+              Register
+            </Link>
+          </p>
         </form>
       </div>
     </div>

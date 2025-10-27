@@ -12,8 +12,8 @@ export default function NavBar() {
 
   const navLinks = {
     guest: [
-      { name: 'About', path: '/about' },
-      { name: 'Contact', path: '/contact' },
+      { name: 'About Us', path: '/about' },
+      { name: 'Contact Us', path: '/contact' },
       { name: 'Login/Register', path: '/auth/login' },
       // { name: 'Register', path: '/auth/register' },
     ],

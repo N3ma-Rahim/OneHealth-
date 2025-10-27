@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useNavigate } from "react-router-dom";
 
 export default function ResetPassword() {
   const ResetPasswordSchema = z
@@ -21,9 +22,10 @@ export default function ResetPassword() {
   } = useForm({
     resolver: zodResolver(ResetPasswordSchema),
   });
-
+  const navigate = useNavigate();
   const onSubmit = (data) => {
     console.log(data);
+    navigate('/auth/login')
   };
 
   return (
