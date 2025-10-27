@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.MainButton {
+  @apply bg-[#1262EB] text-white font-semibold py-2 px-4 rounded hover:bg-[#0088ff] transition-colors;
+}
+
+.MainText {
+  @apply text-[#1262EB] font-bold text-2xl tracking-wide leading-relaxed;
+}
